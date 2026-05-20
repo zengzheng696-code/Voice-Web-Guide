@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Voice Web Guide MVP",
+  "description": "A voice-first webpage guide that answers questions about the current page and highlights relevant elements.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://api.deepseek.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Voice Web Guide",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

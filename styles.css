@@ -1,0 +1,174 @@
+.vwg-root,
+.vwg-root * {
+  box-sizing: border-box;
+}
+
+.vwg-root {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  color: #111827;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.vwg-root.vwg-dragging {
+  cursor: grabbing;
+}
+
+.vwg-card {
+  width: min(360px, calc(100vw - 40px));
+  padding: 12px;
+  border: 1px solid rgba(37, 99, 235, 0.28);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.22);
+}
+
+.vwg-status {
+  margin: 0 0 8px;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.vwg-answer {
+  max-height: 150px;
+  margin: 0;
+  overflow: auto;
+  color: #111827;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.vwg-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.vwg-button {
+  min-width: 104px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.3);
+  touch-action: manipulation;
+}
+
+.vwg-button:hover {
+  background: #1d4ed8;
+}
+
+.vwg-button.vwg-stop {
+  background: #dc2626;
+  box-shadow: 0 10px 28px rgba(220, 38, 38, 0.28);
+}
+
+.vwg-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.vwg-highlight {
+  position: fixed;
+  z-index: 2147483646;
+  pointer-events: none;
+  border: 3px solid #2563eb;
+  border-radius: 8px;
+  background: rgba(37, 99, 235, 0.08);
+  box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.2);
+}
+
+.vwg-highlight-label {
+  position: fixed;
+  z-index: 2147483647;
+  max-width: 260px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: #1d4ed8;
+  color: #ffffff;
+  pointer-events: none;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  line-height: 1.35;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.26);
+}
+
+.vwg-popup-body {
+  width: 340px;
+  margin: 0;
+  background: #f8fafc;
+  color: #111827;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+}
+
+.vwg-popup {
+  padding: 16px;
+}
+
+.vwg-popup h1 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.vwg-popup p {
+  margin: 0 0 14px;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.vwg-popup label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.vwg-popup label span {
+  display: block;
+  margin-bottom: 5px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.vwg-popup input {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 13px;
+}
+
+.vwg-popup button {
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.vwg-popup-status {
+  min-height: 18px;
+  margin-top: 10px !important;
+  color: #047857 !important;
+}
